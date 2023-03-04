@@ -5,7 +5,7 @@ To clean up a workspace of temporary files.
 It helps understand how much space is used in the workspace, and assists in erasing the files you don't want to keep. 
 It can erase files selected by size, date, extension while protecting those in the workspace's Tables or in specific submissions.
 
-See [Eraser.ipynb](Eraser.ipynb).
+See [Eraser.ipynb](Eraser.ipynb) (some outputs with too much details are not shown).
 
 # Custom notebook Docker container
 
