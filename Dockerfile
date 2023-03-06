@@ -64,7 +64,7 @@ RUN cmake -H. -DCMAKE_BUILD_TYPE=Generic -Bbuild \
 ## vg
 WORKDIR /bin
 RUN rm -f vg && \
-    wget --no-check-certificate --quiet https://github.com/vgteam/vg/releases/download/v1.43.0/vg && \
+    wget --no-check-certificate --quiet https://github.com/vgteam/vg/releases/download/v1.46.0/vg && \
     chmod +x vg
 ENV PATH $PATH:/bin
 

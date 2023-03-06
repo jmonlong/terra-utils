@@ -7,13 +7,15 @@ It can erase files selected by size, date, extension while protecting those in t
 
 See [Eraser.ipynb](Eraser.ipynb) (some outputs with too much details are not shown).
 
+[![](eraser.jpg)](Eraser.ipynb)
+
 # Custom notebook Docker container
 
 This image extends the [terra-jupyter-r](https://github.com/DataBiosphere/terra-docker/blob/master/terra-jupyter-r/README.md) notebook with:
 
 - [bcftools](https://samtools.github.io/bcftools/bcftools.html)
 - [samtools](samtools.github.io/)
-- [vg](https://github.com/vgteam/vg)
+- [vg](https://github.com/vgteam/vg) v1.46.0
 - [odgi](https://github.com/pangenome/odgi)
 - `less` (!!!)
 - GNU time (use with `env time` or `/usr/local/bin/time`)
@@ -24,18 +26,20 @@ This image extends the [terra-jupyter-r](https://github.com/DataBiosphere/terra-
 ## Build and push to DockerHub
 
 Terra only accepts containers hosted on Google, GitHub, or DockerHub for its interactive environments (see [Terra support](https://support.terra.bio/hc/en-us/community/posts/4405150565659--Error-creating-cloud-environment-when-using-Quay-Docker-images-for-custom-cloud-environments)).
-I just have a free account on DockerHub so I build the (big) image locally and push.
+I just have a free account on DockerHub, so I build the (big) image locally and push.
 
 The DockerHub page is [jmonlong/terra-noteboook-custom](https://hub.docker.com/repository/docker/jmonlong/terra-noteboook-custom/general).
 
-The latest version is `jmonlong/terra-notebook-custom:0.0.3`
+The latest version is `jmonlong/terra-notebook-custom:0.0.4`
 
 ```sh
 docker build -t jmonlong-terra-notebook-custom .
 
-docker tag jmonlong-terra-notebook-custom jmonlong/terra-notebook-custom:0.0.3
-docker push jmonlong/terra-notebook-custom:0.0.3
+docker tag jmonlong-terra-notebook-custom jmonlong/terra-notebook-custom:0.0.4
+docker push jmonlong/terra-notebook-custom:0.0.4
 ```
+
+*Note: those images are quite big, so it can take some time to build and push.*
 
 ## Run locally
 
